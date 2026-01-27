@@ -1,0 +1,66 @@
+Acme Corporation IT Security and Acceptable Use Policy
+
+1. OVERVIEW
+
+This policy establishes guidelines for the appropriate use of Acme Corporation's information technology resources. All employees, contractors, and temporary workers must adhere to these policies to protect company data and maintain network security.
+
+2. PASSWORD REQUIREMENTS
+
+All passwords must meet the following criteria:
+- Minimum 12 characters in length
+- At least one uppercase letter, one lowercase letter, one number, and one special character
+- Cannot contain your name, username, or common dictionary words
+- Must be changed every 90 days
+- Cannot reuse any of your last 10 passwords
+
+Multi-factor authentication (MFA) is required for all systems containing sensitive data, including email, VPN access, and financial applications.
+
+3. EMAIL AND COMMUNICATION
+
+Company email is for business purposes. Limited personal use is acceptable but should not interfere with work responsibilities. Employees should never open attachments or click links from unknown senders. Report suspicious emails to security@acmecorp.com immediately.
+
+Confidential information should never be sent via email without encryption. Use the Acme Secure File Transfer system for sensitive documents. When in doubt, consult with IT Security before transmitting sensitive data.
+
+4. SOFTWARE AND DOWNLOADS
+
+Only IT-approved software may be installed on company devices. Submit software requests through the IT Service Portal. Unauthorized software installation may result in disciplinary action and poses significant security risks.
+
+Employees must not download or install software from untrusted sources. Browser extensions require IT approval. Personal software licenses may not be used on company equipment.
+
+5. REMOTE ACCESS
+
+VPN must be used when accessing company resources from outside the office. Never connect to company systems using public WiFi without VPN protection. Keep your VPN client updated to the latest version.
+
+Remote desktop connections are logged and monitored. All remote work must comply with the Remote Work Agreement on file with HR.
+
+6. DATA PROTECTION
+
+Company data must be classified according to sensitivity: Public, Internal, Confidential, or Restricted. Handle each classification according to established procedures:
+
+- Public: No restrictions on sharing
+- Internal: Share only with Acme employees
+- Confidential: Share only on a need-to-know basis with documented approval
+- Restricted: Requires explicit authorization from data owner and encryption in transit and at rest
+
+Never store company data on personal devices or cloud storage accounts. Use only approved company systems and storage solutions.
+
+7. INCIDENT REPORTING
+
+Report all security incidents immediately to IT Security at security@acmecorp.com or call extension 1201. Security incidents include:
+- Lost or stolen devices
+- Suspected malware or virus infection
+- Unauthorized access attempts
+- Data breaches or potential data exposure
+- Phishing attempts (forward the email to phishing@acmecorp.com)
+
+Prompt reporting is essential. Employees will not be penalized for reporting incidents in good faith.
+
+8. CONSEQUENCES OF VIOLATION
+
+Violations of this policy may result in disciplinary action up to and including termination. Serious violations may also result in civil or criminal penalties under applicable law.
+
+Questions about this policy should be directed to IT Security or Human Resources.
+
+Last Updated: January 2024
+Policy Owner: IT Security Team
+Next Review Date: January 2025
