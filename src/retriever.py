@@ -24,8 +24,8 @@ def retrieve(query: str, top_k: int = 5) -> list[dict]:
         result = {
             "id": match.id,
             "score": match.score,
-            "text": match.metadata.get("_text", ""),
-            "metadata": {k: v for k, v in match.metadata.items() if k != "_text"}
+            "text": match.metadata.get("text", ""),
+            "metadata": {k: v for k, v in match.metadata.items() if k != "text"}
         }
         results.append(result)
     

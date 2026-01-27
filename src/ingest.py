@@ -5,7 +5,7 @@ Handles loading documents from various sources and chunking them for embedding.
 
 import uuid
 from pathlib import Path
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from src.config import Config
 from src.vectorstore import upsert_documents
 
