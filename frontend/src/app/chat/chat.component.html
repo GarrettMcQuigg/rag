@@ -1,9 +1,11 @@
 <div class="chat-container">
 
   <header class="chat-header">
+    @if(messages.length > 0) {
     <button class="new-chat-btn" (click)="startNewChat()" title="Start new chat">
       <i class="fa-solid fa-plus"></i>
     </button>
+    }
     <div class="chat-header-content">
       <div class="logo"><i class="fa-brands fa-rocketchat"></i></div>
       <h1>RAG Chatbot</h1>
