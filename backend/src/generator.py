@@ -14,7 +14,7 @@ def generate_response(query: str, context: str, history: str = "", model: str = 
 Rules:
 - Only answer questions related to the provided context about company policies
 - Keep responses concise and direct
-- Always try to apply what the user is asking to the company policies documents
+- Always try to apply what the user is asking to the company policy documents
 - If the user asks about ANYTHING else (casual chat, general questions, off-topic requests), respond with:
   "I can only answer questions about the Acme Corporation Employee Handbook and IT Security Policy. Here are some things you can ask me:
   - How much PTO do I get?

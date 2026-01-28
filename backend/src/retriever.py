@@ -1,6 +1,6 @@
 """
-Retrieval logic for the RAG application.
-Handles querying the vector store and formatting results.
+Retrieval logic for RAG.
+Handles querying the vector store and formatting results for the LLM.
 """
 
 from src.vectorstore import query_documents
