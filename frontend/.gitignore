@@ -10,9 +10,22 @@
 /node_modules
 npm-debug.log
 yarn-error.log
+# Backend
+backend/.env
+backend/venv/
+backend/__pycache__/
+backend/src/__pycache__/
 
-# IDEs and editors
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/.vscode/
+
+# IDE
 .idea/
+.vscode/
+*.swp
 .project
 .classpath
 .c9/
