@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -18,13 +18,13 @@ interface Message {
 export class ChatComponent {
   @ViewChild('messagesContainer') private messagesContainer!: ElementRef;
 
+  private http = inject(HttpClient);
+
   messages: Message[] = [];
   inputText = '';
   isLoading = false;
 
   private apiUrl = 'http://localhost:8000/api/ask';
-
-  constructor(private http: HttpClient) { }
 
   sendMessage(): void {
     if (!this.inputText.trim() || this.isLoading) return;

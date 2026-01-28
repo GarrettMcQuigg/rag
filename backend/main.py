@@ -34,17 +34,17 @@ def interactive_query():
     """Run interactive query mode."""
     print("🔍 Interactive Query Mode")
     print("Type 'quit' or 'exit' to stop\n")
-    
+
     while True:
         query = input("Enter your query: ").strip()
-        
+
         if query.lower() in ["quit", "exit", "q"]:
             print("Goodbye!")
             break
-        
+
         if not query:
             continue
-        
+
         search_and_print(query, top_k=3)
         print()
 
@@ -55,7 +55,9 @@ def show_stats():
     print("=" * 30)
     stats = get_index_stats()
     print(f"Total vectors: {stats.total_vector_count}")
-    print(f"Namespaces: {list(stats.namespaces.keys()) if stats.namespaces else ['default']}")
+    print(
+        f"Namespaces: {list(stats.namespaces.keys()) if stats.namespaces else ['default']}"
+    )
 
 
 def clear_index():
@@ -72,23 +74,23 @@ def ask_question():
     """Full RAG: retrieve context and generate answer."""
     print("💬 RAG Question Answering")
     print("Type 'quit' or 'exit' to stop\n")
-    
+
     while True:
         query = input("Ask a question: ").strip()
-        
+
         if query.lower() in ["quit", "exit", "q"]:
             print("Goodbye!")
             break
-        
+
         if not query:
             continue
-        
+
         print("\n🔍 Retrieving context...")
         context = retrieve_as_context(query, top_k=3)
-        
+
         print("🤖 Generating answer...\n")
         answer = generate_response(query, context)
-        
+
         print(f"{answer}\n")
 
 
@@ -96,9 +98,9 @@ def main():
     if len(sys.argv) < 2:
         print(__doc__)
         return
-    
+
     command = sys.argv[1].lower()
-    
+
     if command == "ingest":
         ingest_data()
     elif command == "query":

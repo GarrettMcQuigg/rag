@@ -12,14 +12,14 @@ load_dotenv()
 
 class Config:
     """Application configuration loaded from environment variables."""
-    
+
     PINECONE_API_KEY: str = os.getenv("PINECONE_API_KEY", "")
     PINECONE_INDEX_NAME: str = os.getenv("PINECONE_INDEX_NAME", "towering-fir")
-    
+
     # Chunking settings
     CHUNK_SIZE: int = 512
     CHUNK_OVERLAP: int = 50
-    
+
     @classmethod
     def validate(cls) -> bool:
         """Validate that required configuration is present."""

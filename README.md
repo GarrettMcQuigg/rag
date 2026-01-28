@@ -151,6 +151,34 @@ rag-project/
 | POST | `/api/ask` | Send a question, get an answer |
 | GET | `/api/health` | Health check |
 
+## Development
+
+### Linting
+
+**Frontend (Angular/TypeScript):**
+```bash
+cd frontend
+ng lint
+
+# Auto-fix issues
+ng lint -- --fix
+```
+
+**Backend (Python):**
+```bash
+cd backend
+pip install ruff
+
+# Lint
+ruff check .
+
+# Auto-fix
+ruff check --fix .
+
+# Format code
+ruff format .
+```
+
 ## License
 
 MIT

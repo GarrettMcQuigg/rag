@@ -5,7 +5,9 @@ LLM generation using Ollama.
 import requests
 
 
-def generate_response(query: str, context: str, history: str = "", model: str = "llama3.2") -> str:
+def generate_response(
+    query: str, context: str, history: str = "", model: str = "llama3.2"
+) -> str:
     """
     Generate a response using Ollama with retrieved context and conversation history.
     """
@@ -34,11 +36,7 @@ Response:"""
 
     response = requests.post(
         "http://localhost:11434/api/generate",
-        json={
-            "model": model,
-            "prompt": prompt,
-            "stream": False
-        }
+        json={"model": model, "prompt": prompt, "stream": False},
     )
 
     return response.json()["response"].strip()
