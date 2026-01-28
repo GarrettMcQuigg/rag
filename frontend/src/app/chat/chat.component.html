@@ -1,0 +1,90 @@
+<div class="chat-container">
+
+  <header class="chat-header">
+    <button class="new-chat-btn" (click)="startNewChat()" title="Start new chat">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+    <div class="chat-header-content">
+      <div class="logo"><i class="fa-brands fa-rocketchat"></i></div>
+      <h1>RAG Chatbot</h1>
+    </div>
+    <p>Ask questions about Acme Corporation policies</p>
+  </header>
+
+  <div class="messages-wrapper" #messagesContainer>
+    <div class="messages-container">
+
+      @if (messages.length === 0 && !isLoading) {
+      <div class="welcome-center">
+        <div class="welcome-icon"><i class="fa fa-robot"></i></div>
+        <h2>How can I help you today?</h2>
+        <p class="welcome-subtitle">Ask me anything about company policies and procedures</p>
+
+        <div class="suggestion-chips">
+          <button class="suggestion-btn" (click)="useSuggestion('What are the password requirements?')">
+            What are the password requirements?
+          </button>
+          <button class="suggestion-btn" (click)="useSuggestion('Does Acme support Professional Development?')">
+            Does Acme support Professional Development?
+          </button>
+          <button class="suggestion-btn" (click)="useSuggestion('What are the remote work guidelines?')">
+            What are the remote work guidelines?
+          </button>
+        </div>
+      </div>
+      }
+
+      @for (msg of messages; track $index) {
+      <div class="message" [ngClass]="msg.role" [@messageAnimation]>
+        <!-- Assistant side (left) -->
+        <ng-container *ngIf="msg.role === 'assistant'">
+          <div class="avatar">
+            <i class="fa fa-robot"></i>
+          </div>
+          <div class="message-bubble">
+            {{ msg.content }}
+          </div>
+        </ng-container>
+
+        <!-- User side (right) -->
+        <ng-container *ngIf="msg.role === 'user'">
+          <div class="message-bubble">
+            {{ msg.content }}
+          </div>
+          <div class="avatar user-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </ng-container>
+      </div>
+      }
+
+      @if (isLoading) {
+      <div class="message assistant" [@messageAnimation]>
+        <div class="avatar assistant-avatar">
+          <i class="fa fa-robot"></i>
+        </div>
+        <div class="message-content">
+          <div class="message-bubble assistant-bubble loading">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+  <div class="input-area">
+    <div class="input-wrapper">
+      <textarea #textarea [(ngModel)]="inputText" (input)="autoGrow(textarea)"
+        (keydown)="handleKeydown($event, textarea)" placeholder="Ask a question..." rows="1"></textarea>
+
+      <button class="send-btn" (click)="sendMessage()" [disabled]="isLoading || !inputText.trim()" title="Send message">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </div>
+    <div class="input-hint">Press Enter to send, Shift + Enter for new line</div>
+  </div>
+
+</div>
