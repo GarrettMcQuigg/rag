@@ -2,6 +2,7 @@ import { Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -24,7 +25,7 @@ export class ChatComponent {
   inputText = '';
   isLoading = false;
 
-  private apiUrl = 'http://localhost:8000/api/ask';
+  private apiUrl = `${environment.apiUrl}/api/ask`;
 
   sendMessage(): void {
     if (!this.inputText.trim() || this.isLoading) return;
