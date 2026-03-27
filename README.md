@@ -3,7 +3,7 @@
 A Retrieval-Augmented Generation (RAG) chatbot built with Angular, FastAPI, Pinecone, and Ollama. Ask questions about company policies and get accurate answers grounded in source documents.
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
-![Angular](https://img.shields.io/badge/Angular-17-red)
+![Angular](https://img.shields.io/badge/Angular-21-red)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.109-green)
 
 ## Features
@@ -17,7 +17,7 @@ A Retrieval-Augmented Generation (RAG) chatbot built with Angular, FastAPI, Pine
 
 | Layer | Technology |
 |-------|------------|
-| Frontend | Angular 17 |
+| Frontend | Angular 21 |
 | Backend | FastAPI (Python) |
 | Vector DB | Pinecone |
 | Embeddings | Llama Text Embed v2 |
